@@ -69,3 +69,52 @@
 /*Fim do portifolio */
 
 
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f4f4f4;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+.login-container {
+   background-color: white;
+   padding: 20px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+   margin-bottom: 15px;
+}
+.form-group label {
+   display: block;
+   margin-bottom: 5px;
+}
+.form-group input {
+   width: 100%;
+   padding: 8px;
+   box-sizing: border-box;
+}
+.error {
+   color: red;
+   display: none;
+}
+.btn {
+   background-color: #007BFF;
+   color: white;
+   padding: 10px;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   border-radius: 5px;
+   margin-top: 10px;
+}
+.btn:hover {
+   background-color: #0056b3;
+}
+#googleSignInButton {
+   width: 100%;
+   margin-top: 10px;
+}
+
+
