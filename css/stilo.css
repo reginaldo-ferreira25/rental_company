@@ -1,0 +1,71 @@
+/* Estilo do Projeto */
+.login{
+    width: 100%;
+   height: 100vh; /* viewport - área de visualização */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(to right, #B20000, #4A565C);
+}
+
+/* Portifolio de Imagens */
+.portifolio-veiculos {
+   width: 50%;
+   margin: auto;
+   overflow: hidden;
+}
+
+.portifolio { /*Tempo de passagem de cada imagem*/
+   display: flex;
+   transition: transform 0.5s ease-in-out;
+}
+
+.portifolio img {
+   width: 100%;
+   height: auto;
+}
+
+.portifolio-btn {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 24px;
+   background-color: #3498db;
+   color: #fff;
+   border: none;
+   padding: 10px;
+   border-radius: 5px;
+}
+
+.prev {
+   left: 10px;
+}
+
+.next {
+   right: 10px;
+}
+
+.hidden{
+   display: none;
+}
+
+.custom-g-signin {
+   display: inline-block;
+   background: #4285f4;
+   color: white;
+   width: 240px;
+   height: 50px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 5px grey;
+   white-space: nowrap;
+   font-size: 16px;
+   line-height: 50px;
+   text-align: center;
+   cursor: pointer;
+}
+
+/*Fim do portifolio */
+
+

@@ -1,0 +1,13 @@
+# Ignorar configurações e dados do Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Ignorar arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Outras exclusões comuns (opcional)
+node_modules/
+dist/
+build/
