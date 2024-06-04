@@ -132,26 +132,7 @@ async function setupRealtimeUpdatesCars() {
             var resultHTMLHome = '';
 
             numberItem += 1
-
-            // Preenche o card
-            resultHTMLHome += `
-                        <div class="card m-4" style="width: 18rem;">
-                                <img src="./images/Argo_compact.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold">${data.model}</h5>
-                                    <div>
-                                        <span><b>Marca:</b> ${data.brand}</span><span> - <b>Ano:</b> ${data.year}</span>                          
-                                    </div>                       
-                                <p class="card-text font-weight-light">${truncateString(data.description, 60)} <span><a class="card-text font-weight-light" href="#">Ler mais</a></span></p>
-                                
-                                </div>                  
-                                <div class="card-footer">
-                                    <button class="btn btn-sm btn-primary btn-block" type="button">Reserve agora</button>
-                                </div>
-                            </div> 
-                             
-                        `;
-
+            
             // Preenche as linhas da tabela
 
             const row = document.createElement('tr');
@@ -193,9 +174,30 @@ async function setupRealtimeUpdatesCars() {
                 tableBody.appendChild(row);
             }
 
-            if (outputParagraphHome) {
-                outputParagraphHome.innerHTML = resultHTMLHome;
-            }
+            // Preenche a lista dos cards
+            firestoreData.forEach((item) => {
+                
+            resultHTMLHome += `
+            <div class="card m-4" style="width: 18rem;">
+                    <img src="./images/Argo_compact.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">${item.data.model}</h5>
+                        <div>
+                            <span><b>Marca:</b> ${item.data.brand}</span><span> - <b>Ano:</b> ${item.data.year}</span>                          
+                        </div>                       
+                    <p class="card-text font-weight-light">${truncateString(item.data.description, 60)} <span><a class="card-text font-weight-light" href="#">Ler mais</a></span></p>
+                    
+                    </div>                  
+                    <div class="card-footer">
+                        <button class="btn btn-sm btn-primary btn-block" type="button">Reserve agora</button>
+                    </div>
+                </div> 
+                 
+            `;
+                if (outputParagraphHome) {
+                    outputParagraphHome.innerHTML = resultHTMLHome;
+                }
+            })
 
         });
     }, (error) => {
