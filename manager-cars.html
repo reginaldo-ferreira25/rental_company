@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Gerenciamento de Veiculos</title>
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <div class="container mt-4">
+            <div class="row">
+                <!-- Coluna do Formulário -->
+                <div class="col-md-4">
+                    <h3>Formulário</h3>
+                    <form id="car-form">
+                        <div class="form-group">
+                            <label for="brand">Marca</label>
+                            <input type="text" class="form-control" id="brand" name="brand" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Modelo</label>
+                            <input type="text" class="form-control" id="model" name="model" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Ano</label>
+                            <input type="number" class="form-control" id="year" name="year" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Descricao</label>
+                            <textarea id="description" name="description" class="form-control" aria-label="With textarea" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input id="statusCheckbox" type="checkbox">
+                            <label id="statusLabel" for="status">Status</label>
+                          </div>
+                        <input type="hidden" id="documentId">
+                        <button type="submit" class="btn btn-primary" id="submit-button">Salvar</button>
+                    </form>
+                </div>
+                <!-- Coluna da Tabela -->
+                <div class="col-md-8">
+                    <h3>Veiculos</h3>
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Modelo</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">Ano</th>
+                            <th scope="col">Ações</th>
+                          </tr>
+                        </thead>
+                        <tbody id="output-cars">
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+      
+      </main>
+    
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/navbar.js"></script>
+<script type="module" src="./firebase/config.js"></script>
+<script type="module" src="./firebase/crud_firestore.js"></script>
+</html>
