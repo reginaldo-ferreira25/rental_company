@@ -180,6 +180,7 @@ async function setupRealtimeUpdatesCars() {
             resultHTMLHome += `
             <div class="card m-4" style="width: 18rem;">
                     <img src="./images/Argo_compact.jpeg" class="card-img-top" alt="...">
+            
                     <div class="card-body">
                         <h5 class="card-title font-weight-bold">${item.data.model}</h5>
                         <div>
@@ -192,7 +193,8 @@ async function setupRealtimeUpdatesCars() {
                         <button class="btn btn-sm btn-primary btn-block" type="button">Reserve agora</button>
                     </div>
                 </div> 
-                 
+
+               
             `;
                 if (outputParagraphHome) {
                     outputParagraphHome.innerHTML = resultHTMLHome;

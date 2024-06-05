@@ -28,10 +28,10 @@
                         </div>
                         <div class="form-group">
                             <label for="year">Ano</label>
-                            <input type="number" class="form-control" id="year" name="year" required>
+                            <input type="number" onkeypress="return event.charCode >= 48" min="1" class="form-control" id="year" name="year" required>
                         </div>
                         <div class="form-group">
-                            <label for="description">Descricao</label>
+                            <label for="description">Descrição</label>
                             <textarea id="description" name="description" class="form-control" aria-label="With textarea" required></textarea>
                         </div>
                         <div class="form-group">
@@ -49,8 +49,8 @@
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Modelo</th>
                             <th scope="col">Marca</th>
+                            <th scope="col">Modelo</th>
                             <th scope="col">Ano</th>
                             <th scope="col">Ações</th>
                           </tr>
